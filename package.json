@@ -1,11 +1,10 @@
 {
 	"name": "tencent-wx-jssdk",
-	"version": "1.0.0",
+	"version": "1.2.1-dev.201708101419",
 	"description": "微信 JS-SDK",
 	"main": "index.js",
 	"types": "index.d.ts",
-	"scripts": {
-	},
+	"scripts": {},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/taoqf/tencent-wx-jssdk.git"
