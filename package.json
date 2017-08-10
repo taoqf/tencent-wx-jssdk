@@ -1,6 +1,6 @@
 {
 	"name": "tencent-wx-jssdk",
-	"version": "1.0.1",
+	"version": "1.0.0-dev.201708101422",
 	"description": "微信 JS-SDK",
 	"main": "index.js",
 	"types": "index.d.ts",
