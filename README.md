@@ -7,8 +7,12 @@ Weixin [JS-SDK](https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp14211
 
 # Install
 
-```
+```sh
 npm install tencent-wx-jssdk --save
+# or
+npm install tencent-wx-jssdk@v1_0_0 --save	# sdk version v1.0.0
+npm install tencent-wx-jssdk@v1_1_0 --save	# sdk version v1.1.0
+npm install tencent-wx-jssdk@v1_2_0 --save	# sdk version v1.2.0
 ```
 
 # How to Use
