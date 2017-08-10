@@ -1,0 +1,29 @@
+{
+	"name": "tencent-wx-jssdk",
+	"version": "1.0.1",
+	"description": "微信 JS-SDK",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/taoqf/tencent-wx-jssdk.git"
+	},
+	"keywords": [
+		"wx",
+		"weixin",
+		"微信",
+		"公众号",
+		"jssdk",
+		"sdk",
+		"typescript"
+	],
+	"author": "taoqf",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/taoqf/tencent-wx-jssdk/issues"
+	},
+	"homepage": "https://github.com/taoqf/tencent-wx-jssdk#readme"
+}
