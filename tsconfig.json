@@ -1,0 +1,23 @@
+{
+	"include": [
+		"**/*.ts"
+	],
+	"compileOnSave": false,
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "esnext",
+		"noImplicitAny": true,
+		"sourceMap": false,
+		"strictNullChecks": false,
+		"noImplicitThis": true,
+		"allowJs": false,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"alwaysStrict": true,
+		"allowSyntheticDefaultImports": false,
+		"noImplicitReturns": false,
+		"noImplicitUseStrict": false,
+		"skipLibCheck": true, // default false
+		"watch": false
+	}
+}
