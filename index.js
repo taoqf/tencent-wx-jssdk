@@ -1,4 +1,4 @@
-! function (a, b) {
+!function (a, b) {
 	if (typeof module === "object" && typeof module.exports === "object") {
 		module.exports = b(a);
 	}
@@ -7,7 +7,7 @@
 	} else {
 		b(a, !0);
 	}
-}(this, function (a, b) {
+}(window, function (a, b) {
 	function c(b, c, d) {
 		a.WeixinJSBridge ? WeixinJSBridge.invoke(b, e(c), function (a) {
 			h(b, a, d)
