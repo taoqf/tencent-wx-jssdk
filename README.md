@@ -84,3 +84,14 @@ wx.scanQRCode({
 	}
 });
 ```
+
+# Others
+
+## ts Error
+
+If you get this Error:
+`[ts] Initializers are not allowed in ambient contexts.`
+
+Try add `"skipLibCheck": true` to `compilerOptions` in file `tsconfig.json`.
+
+Good luck!
