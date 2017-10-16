@@ -3,7 +3,9 @@
 		module.exports = b(a);
 	}
 	else if (typeof define === "function" && define.amd) {
-		return b(a);
+		define([], () => {
+			return b(a);
+		});
 	} else {
 		b(a, !0);
 	}
