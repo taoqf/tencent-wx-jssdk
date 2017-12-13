@@ -1,4 +1,4 @@
-! function (e, n) {
+!function (e, n) {
 	if (typeof module === "object" && typeof module.exports === "object") {
 		module.exports = n(e);
 	} else if (typeof define === "function" && define.amd) {
@@ -56,7 +56,6 @@
 		}
 		i.complete && i.complete(n)
 	}
-
 	function s(e, n) {
 		var i = e,
 			t = v[i];
@@ -68,7 +67,6 @@
 		}
 		return n = i + ":" + o
 	}
-
 	function d(e) {
 		if (e) {
 			for (var n = 0, i = e.length; n < i; ++n) {
@@ -79,14 +77,12 @@
 			return e
 		}
 	}
-
 	function u(e, n) {
 		if (!(!C.debug || n && n.isInnerInvoke)) {
 			var i = v[e];
 			i && (e = i), n && n._complete && delete n._complete, console.log('"' + e + '",', n || "")
 		}
 	}
-
 	function l(e) {
 		if (!(w || T || C.debug || x < "6.0.2" || A.systemType < 0)) {
 			var n = new Image;
@@ -100,15 +96,12 @@
 			})
 		}
 	}
-
 	function p() {
 		return (new Date).getTime()
 	}
-
 	function f(n) {
 		k && (e.WeixinJSBridge ? "preInject" === I.__wxjsjs__isPreInject ? I.addEventListener && I.addEventListener("WeixinJSBridgeReady", n, !1) : n() : I.addEventListener && I.addEventListener("WeixinJSBridgeReady", n, !1))
 	}
-
 	function m() {
 		N.invoke || (N.invoke = function (n, i, t) {
 			e.WeixinJSBridge && WeixinJSBridge.invoke(n, o(i), t)
@@ -116,7 +109,6 @@
 			e.WeixinJSBridge && WeixinJSBridge.on(n, i)
 		})
 	}
-
 	function g(e) {
 		if ("string" == typeof e && e.length > 0) {
 			var n = e.split("?")[0],
@@ -126,25 +118,25 @@
 	}
 	if (!e.jWeixin) {
 		var h = {
-				config: "preVerifyJSAPI",
-				onMenuShareTimeline: "menu:share:timeline",
-				onMenuShareAppMessage: "menu:share:appmessage",
-				onMenuShareQQ: "menu:share:qq",
-				onMenuShareWeibo: "menu:share:weiboApp",
-				onMenuShareQZone: "menu:share:QZone",
-				previewImage: "imagePreview",
-				getLocation: "geoLocation",
-				openProductSpecificView: "openProductViewWithPid",
-				addCard: "batchAddCard",
-				openCard: "batchViewCard",
-				chooseWXPay: "getBrandWCPayRequest",
-				openEnterpriseRedPacket: "getRecevieBizHongBaoRequest",
-				startSearchBeacons: "startMonitoringBeacons",
-				stopSearchBeacons: "stopMonitoringBeacons",
-				onSearchBeacons: "onBeaconsInRange",
-				consumeAndShareCard: "consumedShareCard",
-				openAddress: "editAddress"
-			},
+			config: "preVerifyJSAPI",
+			onMenuShareTimeline: "menu:share:timeline",
+			onMenuShareAppMessage: "menu:share:appmessage",
+			onMenuShareQQ: "menu:share:qq",
+			onMenuShareWeibo: "menu:share:weiboApp",
+			onMenuShareQZone: "menu:share:QZone",
+			previewImage: "imagePreview",
+			getLocation: "geoLocation",
+			openProductSpecificView: "openProductViewWithPid",
+			addCard: "batchAddCard",
+			openCard: "batchViewCard",
+			chooseWXPay: "getBrandWCPayRequest",
+			openEnterpriseRedPacket: "getRecevieBizHongBaoRequest",
+			startSearchBeacons: "startMonitoringBeacons",
+			stopSearchBeacons: "stopMonitoringBeacons",
+			onSearchBeacons: "onBeaconsInRange",
+			consumeAndShareCard: "consumedShareCard",
+			openAddress: "editAddress"
+		},
 			v = function () {
 				var e = {};
 				for (var n in h) e[h[n]] = n;
@@ -191,8 +183,8 @@
 		f(function () {
 			V.initEndTime = p()
 		});
-		var O = !1,
-			E = [],
+		var E = !1,
+			O = [],
 			N = {
 				config: function (e) {
 					C = e, u("config", e);
@@ -370,7 +362,7 @@
 						}
 					}, e))
 				},
-				getLocation: function (e) {},
+				getLocation: function (e) { },
 				previewImage: function (e) {
 					i(h.previewImage, {
 						current: e.current,
@@ -390,14 +382,14 @@
 					}, e)
 				},
 				getLocalImgData: function (e) {
-					!1 === O ? (O = !0, i("getLocalImgData", {
+					!1 === E ? (E = !0, i("getLocalImgData", {
 						localId: e.localId
 					}, (e._complete = function (e) {
-						if (O = !1, E.length > 0) {
-							var n = E.shift();
+						if (E = !1, O.length > 0) {
+							var n = O.shift();
 							wx.getLocalImgData(n)
 						}
-					}, e))) : E.push(e)
+					}, e))) : O.push(e)
 				},
 				getNetworkType: function (e) {
 					var n = function (e) {
@@ -617,6 +609,19 @@
 								url: e.url
 							}
 						}, e)
+					},
+					postMessage: function (e) {
+						i("invokeMiniProgramAPI", {
+							name: "postMessage",
+							arg: e.data || {}
+						}, e)
+					},
+					getEnv: function (n) {
+						f(function () {
+							n({
+								miniprogram: "miniprogram" === e.__wxjs_environment
+							})
+						})
 					}
 				}
 			},
@@ -630,7 +635,7 @@
 				if (("IMG" == i || "VIDEO" == i || "AUDIO" == i || "SOURCE" == i) && -1 != t.indexOf("wxlocalresource://")) {
 					e.preventDefault(), e.stopPropagation();
 					var o = n["wx-id"];
-					if (o || (o = b++, n["wx-id"] = o), R[o]) return;
+					if (o || (o = b++ , n["wx-id"] = o), R[o]) return;
 					R[o] = !0, wx.ready(function () {
 						wx.getLocalImgData({
 							localId: t,
