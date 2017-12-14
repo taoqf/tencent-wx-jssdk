@@ -44,15 +44,6 @@ then use it freely.
 
 ```ts
 
-// you may use wx
-wx.scanQRCode({
-	needResult: 0,
-	scanType: ['qrCode'],
-	success(res) {
-		console.log(res);
-	}
-});
-// or you can use `jWeixin` as well
 jWeixin.scanQRCode({
 	needResult: 0,
 	scanType: ['qrCode'],

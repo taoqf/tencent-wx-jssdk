@@ -577,7 +577,7 @@ declare namespace jWeixin {
 	}
 }
 
-declare var wx = jWeixin;
+// declare var wx = jWeixin;
 
 declare var WeixinJSBridge: jWeixin.WeixinJSBridge;
 
