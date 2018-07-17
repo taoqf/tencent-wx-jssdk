@@ -1,19 +1,19 @@
 # tencent-wx-jssdk
 Weixin [JS-SDK](https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115)
 
-# SDK Version
+## SDK Version
 
-1.3.1
+1.3.2
 
-# Install
+## Install
 
 ```sh
 npm install tencent-wx-jssdk --save
 ```
 
-# How to Use
+## How to Use
 
-## TypeScript
+### TypeScript
 
 ```ts
 // sometime you want import this module, eg. use this with webpack
@@ -57,7 +57,7 @@ WeixinJSBridge.invoke("getBrandWCPayRequest", {}, (res) => {
 });
 ```
 
-## javascript
+### javascript
 
 **You will need this only if you would like get your project packed.**
 
@@ -72,9 +72,9 @@ wx.scanQRCode({
 });
 ```
 
-# Others
+## Others
 
-## ts Error
+### ts Error
 
 If you get this Error:
 `[ts] Initializers are not allowed in ambient contexts.`
