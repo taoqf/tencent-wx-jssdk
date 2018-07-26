@@ -499,7 +499,7 @@ declare namespace jWeixin {
 	/**
 	 * 拉取适用卡券列表并获取用户选择信息
 	 */
-	function chooseCard(params: IchooseCard): void;
+	function chooseCard(params: IChooseCard): void;
 
 	interface IAddCard extends BaseParams {
 		cardList: Array<{
