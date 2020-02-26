@@ -583,6 +583,6 @@ declare namespace jWeixin {
 
 declare var WeixinJSBridge: jWeixin.WeixinJSBridge;
 
-declare module 'tencent-wx-jssdk' {
+declare module 'tencent-wechat-jssdk' {
 	export = jWeixin;
 }
