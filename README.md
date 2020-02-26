@@ -3,7 +3,7 @@ Weixin [JS-SDK](https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp14211
 
 ## SDK Version
 
-1.3.2
+1.6.0
 
 ## Install
 
