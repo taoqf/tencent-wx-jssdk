@@ -1,6 +1,8 @@
 # tencent-wx-jssdk
 Weixin [JS-SDK](https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115)
 
+This is lib not maintain anymore, please use `[@types/jweixin](https://www.npmjs.com/package/@types/jweixin)` instead.
+
 ## SDK Version
 
 1.3.2
