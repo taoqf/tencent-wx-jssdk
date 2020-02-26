@@ -36,6 +36,8 @@ declare namespace jWeixin {
 		'onMenuShareQQ' |
 		'onMenuShareWeibo' |
 		'onMenuShareQZone' |
+		'updateAppMessageShareData' | 
+		'updateTimelineShareData' |
 		'startRecord' |
 		'stopRecord' |
 		'onVoiceRecordEnd' |
