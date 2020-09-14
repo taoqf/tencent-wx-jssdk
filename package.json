@@ -1,13 +1,13 @@
 {
-	"name": "tencent-wx-jssdk",
-	"version": "1.3.2-201807261207",
+	"name": "tencent-wechat-jssdk",
+	"version": "1.0.0-202002261550",
 	"description": "微信 JS-SDK",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"scripts": {},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/taoqf/tencent-wx-jssdk.git"
+		"url": "git+https://github.com/choukin/tencent-wechat-jssdk.git"
 	},
 	"keywords": [
 		"wx",
@@ -21,7 +21,7 @@
 	"author": "taoqf",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/taoqf/tencent-wx-jssdk/issues"
+		"url": "https://github.com/choukin/tencent-wechat-jssdk/issues"
 	},
-	"homepage": "https://github.com/taoqf/tencent-wx-jssdk#readme"
+	"homepage": "https://github.com/choukin/tencent-wechat-jssdk#readme"
 }

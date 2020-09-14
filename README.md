@@ -5,12 +5,12 @@ This is lib not maintain anymore, please use `[@types/jweixin](https://www.npmjs
 
 ## SDK Version
 
-1.3.2
+1.6.0
 
 ## Install
 
 ```sh
-npm install tencent-wx-jssdk --save
+npm install tencent-wechat-jssdk --save
 ```
 
 ## How to Use
