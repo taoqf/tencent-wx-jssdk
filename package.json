@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"types": "index.d.ts",
 	"scripts": {
-		"release": "standard-version && git push --follow-tags origin main && npm publish"
+		"release": "standard-version && git push --follow-tags origin main && npm publish --registry https://registry.npmjs.com"
 	},
 	"repository": {
 		"type": "git",
