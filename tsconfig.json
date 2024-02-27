@@ -4,7 +4,7 @@
 	],
 	"compileOnSave": false,
 	"compilerOptions": {
-		"module": "esnext",
+		"module": "NodeNext",
 		"target": "esnext",
 		"noImplicitAny": true,
 		"sourceMap": false,
@@ -18,6 +18,5 @@
 		"noImplicitReturns": false,
 		"noImplicitUseStrict": false,
 		"skipLibCheck": true, // default false
-		"watch": false
 	}
 }

@@ -4,7 +4,9 @@
 	"description": "微信 JS-SDK",
 	"main": "index.js",
 	"types": "index.d.ts",
-	"scripts": {},
+	"scripts": {
+		"release": "standard-version && git push --follow-tags origin main"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/choukin/tencent-wechat-jssdk.git"
@@ -20,8 +22,14 @@
 	],
 	"author": "taoqf",
 	"license": "MIT",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.com"
+	},
 	"bugs": {
 		"url": "https://github.com/choukin/tencent-wechat-jssdk/issues"
 	},
-	"homepage": "https://github.com/choukin/tencent-wechat-jssdk#readme"
+	"homepage": "https://github.com/choukin/tencent-wechat-jssdk#readme",
+	"devDependencies": {
+		"standard-version": "^9.5.0"
+	}
 }
