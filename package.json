@@ -1,11 +1,11 @@
 {
-	"name": "tencent-wechat-jssdk",
+	"name": "tencent-wx-jssdk",
 	"version": "1.0.3",
 	"description": "微信 JS-SDK",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"scripts": {
-		"release": "standard-version && git push --follow-tags origin main && npm publish --registry https://registry.npmjs.com"
+		"release": "standard-version && git push --follow-tags origin main && npm publish"
 	},
 	"repository": {
 		"type": "git",
