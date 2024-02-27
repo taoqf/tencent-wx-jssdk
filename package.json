@@ -1,6 +1,6 @@
 {
 	"name": "tencent-wechat-jssdk",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "微信 JS-SDK",
 	"main": "index.js",
 	"types": "index.d.ts",
