@@ -36,6 +36,8 @@ declare namespace jWeixin {
 		'onMenuShareQQ' |
 		'onMenuShareWeibo' |
 		'onMenuShareQZone' |
+		'updateAppMessageShareData' | 
+		'updateTimelineShareData' |
 		'startRecord' |
 		'stopRecord' |
 		'onVoiceRecordEnd' |
@@ -129,13 +131,26 @@ declare namespace jWeixin {
 		desc: string;	// 分享描述
 		link: string;	// 分享链接
 		imgUrl: string;	// 分享图标
-		type: 'music' | 'video或link' | 'link';		// 分享类型,music、video或link，不填默认为link
+		type?: 'music' | 'video或link' | 'link';		// 分享类型,music、video或link，不填默认为link
 		dataUrl: string; // 如果type是music或video，则要提供数据链接，默认为空
 		// 用户确认分享后执行的回调函数
 		success(): void;
 		// 用户取消分享后执行的回调函数
 		cancel(): void;
 	}
+
+	/**
+	 * 自定义“分享到朋友圈”及“分享到QQ空间”按钮的分享内容（1.4.0）
+	 * @param params 
+	 */
+	function updateAppMessageShareData(params: Partial<IOnMenuShareAppMessage>): void;
+
+	/**
+	 * 自定义“分享到朋友圈”及“分享到QQ空间”按钮的分享内容（1.4.0）
+	 * @param params 
+	 */
+	function updateTimelineShareData(params: Partial<IOnMenuShareAppMessage>): void;
+
 	/**
 	 * 获取“分享给朋友”按钮点击状态及自定义分享内容接口
 	 */
@@ -581,6 +596,6 @@ declare namespace jWeixin {
 
 declare var WeixinJSBridge: jWeixin.WeixinJSBridge;
 
-declare module 'tencent-wx-jssdk' {
+declare module 'tencent-wechat-jssdk' {
 	export = jWeixin;
 }
