@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/choukin/tencent-wechat-jssdk/compare/v1.4.1...v1.4.2) (2024-03-01)
+
+
+### Bug Fixes
+
+* add openTagList ([3294cf0](https://github.com/choukin/tencent-wechat-jssdk/commit/3294cf03502b11501675a5d91c8cf8fe29924e4b))
+
 ### [1.4.1](https://github.com/choukin/tencent-wechat-jssdk/compare/v1.0.4...v1.4.1) (2024-02-27)
 
 
