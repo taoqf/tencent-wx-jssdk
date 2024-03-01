@@ -2,71 +2,79 @@
 declare namespace jWeixin {
 	// 所有菜单项列表
 	// 基本类
-	type menuBase = "menuItem:exposeArticle" | // 举报
-		"menuItem:setFont" | // 调整字体
-		"menuItem:dayMode" | // 日间模式
-		"menuItem:nightMode" | // 夜间模式
-		"menuItem:refresh" | // 刷新
-		"menuItem:profile" | // 查看公众号（已添加）
-		"menuItem:addContact"; // 查看公众号（未添加）
+	type menuBase = "menuItem:exposeArticle" // 举报
+		| "menuItem:setFont" // 调整字体
+		| "menuItem:dayMode" // 日间模式
+		| "menuItem:nightMode" // 夜间模式
+		| "menuItem:refresh" // 刷新
+		| "menuItem:profile" // 查看公众号（已添加）
+		| "menuItem:addContact" // 查看公众号（未添加）
+		;
 	// 传播类
-	type menuShare = "menuItem:share:appMessage" |	// 发送给朋友
-		"menuItem:share:timeline" |	// 分享到朋友圈
-		"menuItem:share:qq" |	// 分享到QQ
-		"menuItem:share:weiboApp" |	// 分享到Weibo
-		"menuItem:favorite" |	// 收藏
-		"menuItem:share:facebook" |	// 分享到FB
-		"menuItem:share:QZone";	// 分享到 QQ 空间
+	type menuShare = "menuItem:share:favorite" // 收藏
+		| "menuItem:share:appMessage"	// 发送给朋友
+		| "menuItem:share:timeline"	// 分享到朋友圈
+		| "menuItem:share:qq"	// 分享到QQ
+		| "menuItem:share:weiboApp"	// 分享到Weibo
+		| "menuItem:favorite"	// 收藏
+		| "menuItem:share:facebook"	// 分享到FB
+		| "menuItem:share:QZone"	// 分享到 QQ 空间
+		;
 
 	// 保护类
-	type menuProtected = "menuItem:editTag" |	// 编辑标签
-		"menuItem:delete" |	// 删除
-		"menuItem:copyUrl" |	// 复制链接
-		"menuItem:originPage" |	// 原网页
-		"menuItem:readMode" |	// 阅读模式
-		"menuItem:openWithQQBrowser" |	// 在QQ浏览器中打开
-		"menuItem:openWithSafari" |	// 在Safari中打开
-		"menuItem:share:email" |	// 邮件
-		"menuItem:share:brand";	// 一些特殊公众号
+	type menuProtected = "menuItem:editTag"	// 编辑标签
+		| "menuItem:delete"	// 删除
+		| "menuItem:copyUrl"	// 复制链接
+		| "menuItem:originPage"	// 原网页
+		| "menuItem:readMode"	// 阅读模式
+		| "menuItem:openWithQQBrowser"	// 在QQ浏览器中打开
+		| "menuItem:openWithSafari"	// 在Safari中打开
+		| 'menuItem:exposeArticle' // 复制链接
+		| "menuItem:share:email"	// 邮件
+		| "menuItem:share:brand"	// 一些特殊公众号
+		;
 
 	type menuList = Array<menuBase | menuProtected | menuShare>;
 
-	type ApiMethod = 'onMenuShareTimeline' |
-		'onMenuShareAppMessage' |
-		'onMenuShareQQ' |
-		'onMenuShareWeibo' |
-		'onMenuShareQZone' |
-		'startRecord' |
-		'stopRecord' |
-		'onVoiceRecordEnd' |
-		'playVoice' |
-		'pauseVoice' |
-		'stopVoice' |
-		'onVoicePlayEnd' |
-		'uploadVoice' |
-		'downloadVoice' |
-		'chooseImage' |
-		'previewImage' |
-		'uploadImage' |
-		'downloadImage' |
-		'translateVoice' |
-		'getNetworkType' |
-		'openLocation' |
-		'getLocation' |
-		'hideOptionMenu' |
-		'showOptionMenu' |
-		'hideMenuItems' |
-		'showMenuItems' |
-		'hideAllNonBaseMenuItem' |
-		'showAllNonBaseMenuItem' |
-		'closeWindow' |
-		'scanQRCode' |
-		'chooseWXPay' |
-		'openProductSpecificView' |
-		'addCard' |
-		'chooseCard' |
-		'openCard';
-
+	type ApiMethod = 'onMenuShareTimeline'
+		| 'onMenuShareAppMessage'
+		| 'onMenuShareQQ'
+		| 'onMenuShareWeibo'
+		| 'onMenuShareQZone'
+		| 'startRecord'
+		| 'stopRecord'
+		| 'onVoiceRecordEnd'
+		| 'playVoice'
+		| 'pauseVoice'
+		| 'stopVoice'
+		| 'onVoicePlayEnd'
+		| 'uploadVoice'
+		| 'downloadVoice'
+		| 'chooseImage'
+		| 'previewImage'
+		| 'uploadImage'
+		| 'downloadImage'
+		| 'translateVoice'
+		| 'getNetworkType'
+		| 'openLocation'
+		| 'getLocation'
+		| 'hideOptionMenu'
+		| 'showOptionMenu'
+		| 'hideMenuItems'
+		| 'showMenuItems'
+		| 'hideAllNonBaseMenuItem'
+		| 'showAllNonBaseMenuItem'
+		| 'closeWindow'
+		| 'scanQRCode'
+		| 'chooseWXPay'
+		| 'openProductSpecificView'
+		| 'addCard'
+		| 'chooseCard'
+		| 'openCard'
+		| 'checkJsApi'
+		| 'updateAppMessageShareData'
+		| 'updateTimelineShareData'
+		;
 	// 所有JS接口列表
 	type jsApiList = ApiMethod[];
 
@@ -186,6 +194,22 @@ declare namespace jWeixin {
 	 * 获取“分享到QQ空间”按钮点击状态及自定义分享内容接口
 	 */
 	function onMenuShareQZone(params: Partial<IOnMenuShareQZone>): void;
+
+	interface IUpdateAppMessageShareData extends BaseParams {
+		title: string;
+		desc: string;
+		link: string;
+		imgUrl: string;
+	}
+	function updateAppMessageShareData(params: Partial<IUpdateAppMessageShareData>);
+
+	interface IUpdateTimelineShareData extends BaseParams {
+		title: string;
+		desc: string;
+		link: string;
+		imgUrl: string;
+	}
+	function updateTimelineShareData(params: Partial<IUpdateTimelineShareData>);
 }
 
 // 图像接口
