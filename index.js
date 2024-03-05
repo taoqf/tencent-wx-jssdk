@@ -8,7 +8,7 @@
 	} else {
 		n(e, !0);
 	}
-}(typeof window !== "undefined" ? window : global, function (r, e) {
+}(typeof window !== "undefined" ? window : null, function (r, e) {
 	if (!r) {
 		return {};
 	}
